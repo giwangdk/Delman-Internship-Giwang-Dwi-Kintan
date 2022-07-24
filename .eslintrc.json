@@ -19,5 +19,21 @@
         "react"
     ],
     "rules": {
+        "semi": 0,
+      "import/prefer-default-export": "off",
+      "comma-dangle": 0,
+      "arrow-body-style": "off",
+      "prefer-arrow-callback": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "no-unused-vars": [
+        "error",
+        { "argsIgnorePattern": "^_" }
+      ],
+      "linebreak-style": 0,
+      "react/prop-types": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/react-in-jsx-scope" : "off",
+      "import/no-unresolved": "off",
+      "import/extensions" : "off"
     }
 }
