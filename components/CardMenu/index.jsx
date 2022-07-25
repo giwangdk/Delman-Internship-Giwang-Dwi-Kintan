@@ -9,6 +9,7 @@ function CardMenu({
   return (
     <NextLink href={href}>
       <Box
+        cursor="pointer"
         borderWidth="1px"
         p={[6, 5, 7]}
         width={['290px', '290px']}

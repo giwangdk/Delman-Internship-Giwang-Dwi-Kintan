@@ -19,7 +19,7 @@ export default function Home() {
         flexWrap="wrap"
       >
         <CardMenu
-          href="/"
+          href="/title-transformer"
           heading="Title Transformation"
           description="A simple title transformation panel"
         />
