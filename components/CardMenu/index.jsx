@@ -1,6 +1,7 @@
 import { Box, Heading, Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import PropTypes from 'prop-types'
+import { ArrowForwardIcon } from '@chakra-ui/icons'
 
 function CardMenu({
   href, heading, description, ...props
@@ -10,14 +11,21 @@ function CardMenu({
       <Box
         borderWidth="1px"
         p={[6, 5, 7]}
-        minW={['auto', '250px']}
+        width={['290px', '290px']}
         borderRadius="md"
         m={3}
         boxShadow="md"
         {...props}
       >
-        <Heading as="h3" size="md" mb={4}>
+        <Heading
+          as="h3"
+          size="md"
+          mb={4}
+          display="flex"
+          alignItems="center"
+        >
           {heading}
+          <ArrowForwardIcon w={23} ml={3} />
         </Heading>
         <Text fontSize="md">
           {description}

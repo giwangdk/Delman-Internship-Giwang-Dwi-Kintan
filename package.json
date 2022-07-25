@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.4",
     "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
@@ -17,8 +18,7 @@
     "next": "12.2.3",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.4.0"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
