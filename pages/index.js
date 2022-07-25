@@ -18,8 +18,17 @@ export default function Home() {
         flexBasis={['auto', '45%']}
         flexWrap="wrap"
       >
-        <CardMenu />
-        <CardMenu />
+        <CardMenu
+          href="/"
+          heading="Title Transformation"
+          description="A simple title transformation panel"
+        />
+
+        <CardMenu
+          href="/"
+          heading="User Fetcher"
+          description="A simple API fetching and rendering process"
+        />
       </Flex>
     </Flex>
   );

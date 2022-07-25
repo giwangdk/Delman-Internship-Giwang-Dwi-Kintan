@@ -1,5 +1,6 @@
 import { Box, Heading, Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import PropTypes from 'prop-types'
 
 function CardMenu({
   href, heading, description, ...props
@@ -9,7 +10,7 @@ function CardMenu({
       <Box
         borderWidth="1px"
         p={[6, 5, 7]}
-        maxW={['auto', '250px']}
+        minW={['auto', '250px']}
         borderRadius="md"
         m={3}
         boxShadow="md"
@@ -27,3 +28,9 @@ function CardMenu({
 }
 
 export default CardMenu
+
+CardMenu.propTypes = {
+  href: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+}
