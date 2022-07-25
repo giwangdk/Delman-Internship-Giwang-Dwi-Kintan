@@ -1,9 +1,11 @@
 import { Box, Heading, Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
-function CardMenu() {
+function CardMenu({
+  href, heading, description, ...props
+}) {
   return (
-    <NextLink href="/">
+    <NextLink href={href}>
       <Box
         borderWidth="1px"
         p={[6, 5, 7]}
@@ -11,12 +13,13 @@ function CardMenu() {
         borderRadius="md"
         m={3}
         boxShadow="md"
+        {...props}
       >
         <Heading as="h3" size="md" mb={4}>
-          Title Transformer
+          {heading}
         </Heading>
         <Text fontSize="md">
-          A simple title transformation panel
+          {description}
         </Text>
       </Box>
     </NextLink>
