@@ -27,12 +27,14 @@ function TitleTransformer() {
   const [randomIndex, setRandomIndex] = useState(0);
   const [number, setNumber] = useState(900);
   const [random, setRandom] = useState(false);
+  const [count, setCount] = useState(0);
 
   const handleRandomizeColor = () => {
     setInterval(() => {
       const index = Math.floor(Math.random() * (colors.length - 1 - 0 + 1) + 0);
       const randomNumber = Math.round((Math.random() * (900 - 100) + 100) / 100) * 100;
       setRandomIndex(index);
+      setCount((prevCount) => prevCount + 1);
       setNumber(randomNumber);
     }, 1000);
   };
@@ -40,6 +42,7 @@ function TitleTransformer() {
   const handleRandomize = () => {
     if (random) {
       clearInterval();
+      setCount(0);
     } else {
       handleRandomizeColor();
     }
@@ -79,6 +82,7 @@ function TitleTransformer() {
         <Heading
           as="h1"
           size="xl"
+          key={item.id}
           my={4}
           color={`${
             !random ? colors[0] : colors[randomIndex + item.id]
@@ -94,7 +98,11 @@ function TitleTransformer() {
       <Box my={5}>
         <Divider orientation="horizontal" />
         <Stack p={3} spacing={5} direction="row">
-          <Text>Running for: 1335s</Text>
+          <Text>
+            Running for:
+            {count}
+            s
+          </Text>
           <Text>
             Title Count:
             {title.length}
