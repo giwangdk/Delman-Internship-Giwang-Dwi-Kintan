@@ -42,10 +42,10 @@ function TitleTransformer() {
   const handleRandomize = () => {
     if (random) {
       clearInterval();
-      setCount(0);
     } else {
       handleRandomizeColor();
     }
+    setCount(0);
     setRandom(!random);
   };
 
@@ -100,7 +100,7 @@ function TitleTransformer() {
         <Stack p={3} spacing={5} direction="row">
           <Text>
             Running for:
-            {count}
+            {random ? count : '0'}
             s
           </Text>
           <Text>
