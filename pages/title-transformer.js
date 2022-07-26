@@ -10,6 +10,42 @@ import {
 import { useState } from 'react';
 
 function TitleTransformer() {
+  const colors = [
+    'black',
+    'gray',
+    'red',
+    'green',
+    'blue',
+    'yellow',
+    'orange',
+    'purple',
+    'indigo',
+    'teal',
+    'pink',
+  ];
+
+  const [randomIndex, setRandomIndex] = useState(0);
+  const [number, setNumber] = useState(900);
+  const [random, setRandom] = useState(false);
+
+  const handleRandomizeColor = () => {
+    setInterval(() => {
+      const index = Math.floor(Math.random() * (colors.length - 1 - 0 + 1) + 0);
+      const randomNumber = Math.round((Math.random() * (900 - 100) + 100) / 100) * 100;
+      setRandomIndex(index);
+      setNumber(randomNumber);
+    }, 1000);
+  };
+
+  const handleRandomize = () => {
+    if (random) {
+      clearInterval();
+    } else {
+      handleRandomizeColor();
+    }
+    setRandom(!random);
+  };
+
   const [title, setTitle] = useState([
     {
       id: 1,
@@ -40,7 +76,14 @@ function TitleTransformer() {
       alignItems="center"
     >
       {title.map((item) => (
-        <Heading as="h1" size="xl" my={4}>
+        <Heading
+          as="h1"
+          size="xl"
+          my={4}
+          color={`${
+            !random ? colors[0] : colors[randomIndex + item.id]
+          }.${number}`}
+        >
           {item.title}
           {' '}
           -
@@ -61,8 +104,12 @@ function TitleTransformer() {
       </Box>
 
       <Stack spacing={4} direction={['column', 'row']}>
-        <Button variantColor="gray" display={['block']}>
-          Clear Color
+        <Button
+          variantColor="gray"
+          display={['block']}
+          onClick={() => handleRandomize()}
+        >
+          {random ? 'Clear Color' : 'Randomize Color'}
           {' '}
         </Button>
         <Button
@@ -74,7 +121,11 @@ function TitleTransformer() {
           Add title
           {' '}
         </Button>
-        <Button variantColor="gray" onClick={() => handleRemoveTitle()}>
+        <Button
+          variantColor="gray"
+          onClick={() => handleRemoveTitle()}
+          disabled={title.length <= 1}
+        >
           Remove Title
         </Button>
       </Stack>
