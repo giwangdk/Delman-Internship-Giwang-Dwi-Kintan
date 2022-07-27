@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, Heading } from '@chakra-ui/react';
 import CardSkeleton from '../components/CardSkeleton';
 
 function UserFetcher() {
@@ -9,6 +9,9 @@ function UserFetcher() {
       height="100vh"
       alignItems="center"
     >
+      <Heading as="h1" size="xl" my={4}>
+        User Fetcher
+      </Heading>
       <CardSkeleton />
     </Flex>
   );
