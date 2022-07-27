@@ -25,7 +25,7 @@ export default function Home() {
         />
 
         <CardMenu
-          href="/"
+          href="/user-fetcher"
           heading="User Fetcher"
           description="A simple API fetching and rendering process"
         />
