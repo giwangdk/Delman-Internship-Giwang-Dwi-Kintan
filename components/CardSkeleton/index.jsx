@@ -10,7 +10,7 @@ function CardSkeleton() {
       width="40vh"
     >
       <SkeletonCircle mx="auto" size={20} />
-      <SkeletonText noOfLines={8} mt={3} spacing={2} />
+      <SkeletonText noOfLines={8} mt={5} spacing={3} />
     </Box>
   )
 }
