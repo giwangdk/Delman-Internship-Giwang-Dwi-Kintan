@@ -75,7 +75,7 @@ function TitleTransformer() {
     <Flex
       justifyContent="center"
       flexDirection="column"
-      height="100vh"
+      height="90vh"
       alignItems="center"
     >
       {title.map((item) => (

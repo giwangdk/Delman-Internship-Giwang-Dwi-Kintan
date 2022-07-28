@@ -25,7 +25,7 @@ function UserFetcher() {
     <Flex
       justifyContent="center"
       flexDirection="column"
-      height="100vh"
+      height="80vh"
       alignItems="center"
     >
       <Box>

@@ -6,7 +6,7 @@ export default function Home() {
     <Flex
       justifyContent="center"
       flexDirection="column"
-      height="100vh"
+      height="90vh"
       alignItems="center"
     >
       <Heading as="h1" size="xl" mb={5}>
