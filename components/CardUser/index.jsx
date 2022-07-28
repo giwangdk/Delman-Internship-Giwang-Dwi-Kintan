@@ -26,7 +26,7 @@ function CardUser({ user }) {
       </Flex>
 
       <Flex
-        justifyContent="space-between"
+        justifyContent="space-around"
         alignItems="center"
         mt="7"
       >
@@ -36,7 +36,7 @@ function CardUser({ user }) {
         </Box>
         <Box>
           <Text textAlign="center" fontWeight="600">{registered.age}</Text>
-          <Text color="gray.500">Nationality</Text>
+          <Text color="gray.500">Age</Text>
         </Box>
       </Flex>
 
