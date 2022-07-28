@@ -40,7 +40,7 @@ function UserFetcher() {
           width="100%"
           onClick={() => handleFetchUser()}
         >
-          Fetch User
+          {!user ? 'Fetch User' : 'Refetch User'}
         </Button>
       </Box>
     </Flex>
