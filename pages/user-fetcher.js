@@ -25,7 +25,7 @@ function UserFetcher() {
     <Flex
       justifyContent="center"
       flexDirection="column"
-      height="100vh"
+      height="80vh"
       alignItems="center"
     >
       <Box>
@@ -40,7 +40,7 @@ function UserFetcher() {
           width="100%"
           onClick={() => handleFetchUser()}
         >
-          Fetch User
+          {!user ? 'Fetch User' : 'Refetch User'}
         </Button>
       </Box>
     </Flex>
